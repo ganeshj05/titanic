@@ -1,7 +1,7 @@
 library(Hmisc)
 
 #Load Data
-loan_dat <- read.csv(file="E:/I/datascience/module3/datascience/R/QRS_02_SEP_2018/loan_data_new.csv")
+loan_dat <- read.csv(file="E:/I/datascience/module3/datascience/R/QRS_02_SEP_2018/loan_data_new.csv",header=True)
 attach(loan_dat)
 summary(loan_dat)
 
@@ -14,6 +14,8 @@ describe(loan_dat_status)
 
 #Get charged off stats
 loan_dat_status_charged <- subset(loan_dat_status, status=="Charged Off")
+
+#loan_dat_status_charged = filter(loan_dat_status,status=="Charged Off")
 
 summary(loan_dat_status_charged)
 describe(loan_dat_status_charged)
