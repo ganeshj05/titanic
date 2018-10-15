@@ -1,11 +1,11 @@
 library(Hmisc)
 
-loan_dat <- 
+loan_dat <- read.csv(file="E:/I/datascience/module3/datascience/R/QRS_02_SEP_2018/loan_data_new.csv")
 attach(loan_dat)
 summary(loan_dat)
 
-loan_dat_status <- subset(loan_dat,select=c("status","loan_amnt",
-                          "annual_inc", "purpose", "home_ownership"))
+loan_dat_status <- subset(loan_dat,select=c("status","loan_amount",
+                          "annual_income", "purpose", "home_ownership"))
 summary(loan_dat_status)
 attach(loan_dat_status)
 
